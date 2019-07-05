@@ -1,0 +1,25 @@
+<p>order-list works!</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let order of iorders">
+            <th scope="row">
+                <a routerLink="/orders/{{order.OrderID}}">{{order.OrderID}}</a>
+            </th>
+            <td>{{ order.OrderName | slice:0:18}}</td>
+
+        </tr>
+    </tbody>
+</table>
+
+
+<a [routerLink]="'/fmdashboard'">
+    <button type="button" class="btn btn-dark">
+      Go Back</button>
+  </a>
