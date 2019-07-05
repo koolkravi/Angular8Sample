@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'echo Building ${BRANCH_NAME}...'
+        bat 'echo Building ${BRANCH_NAME}...'
       }
     }
   }
